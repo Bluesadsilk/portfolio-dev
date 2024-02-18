@@ -1,14 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import GithubIcon from "../icons/Github.astro";
 import Badge from "../components/Badge.astro";
+import SocialPill from "../components/socialPill.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
 ---
 
-<Layout title="Nomudev">
+<Layout
+  title="Portfolio de Nomudev - Desarrollador, Programador Web y Multiplataforma con 1 año de experiencia"
+  description="Contrata a Nomudev desarrollador Java, programador React, Javascript, MySql, diseño de proyectos, rapida adaptacion a cualquier entorno."
+>
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <img
-        class="rounded-full w-12 h-12 mb-4"
+        class="rounded-full size-12 mb-4"
         src="./src/images/nomudev.png"
         alt="nomudev-foto"
       />
@@ -21,11 +27,26 @@ import Badge from "../components/Badge.astro";
         >
           <Badge>Available for work</Badge>
         </a>
-        <h2 class="text-1xl opacity-80">
-          Taking my first steps. Web and App fullstack developer. From Valencia,
-          Spain. Specialized in learning quickly any technology.
+        <h2 class="text-2xl text-wrap">
+          <span class="text-lightblue-100/90"> Taking my first steps.</span>
+          <span class="text-yellow-200/90">
+            Web and App fullstack developer.</span
+          ><span class="text-red-100/90"> From Valencia, Spain.</span>
+          <span class="opacity-75"
+            >Specialized in learning quickly any technology.</span
+          >
         </h2>
-        <ul></ul>
+        <nav class="flex gap-x-4 mt-10">
+          <SocialPill href="https://www.linkedin.com/in/nomudev">
+            <LinkedInIcon class="size-6" /> LinkedIn
+          </SocialPill>
+          <SocialPill href="https://www.github/nomudev">
+            <GithubIcon class="size-6" /> Github
+          </SocialPill>
+          <SocialPill href="https://www.react.dev">
+            <MailIcon class="size-6" /> noelmrodri@gmail.com
+          </SocialPill>
+        </nav>
       </h1>
     </section>
   </main>
