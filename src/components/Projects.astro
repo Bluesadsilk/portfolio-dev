@@ -1,11 +1,26 @@
 ---
+const TAGS = {
+  REACT: {
+    name: "React.js",
+    class: "bg-white text-blue-200",
+    icon: "",
+  },
+};
 const PROJECTS = [
   {
     title: "MineSweeper",
     description: "MineSweeper game with React.js",
     link: "https://www.nomu.dev/MineSweeper",
     github: "https://www.github.com/nomudev/MineSweeper",
-    image: "https://via.placeholder.com/300x200",
+    image: "/src/images/mockupMineSweeper.png",
+    tags: ["React", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    title: "Tic Tac Toe",
+    description: "Tic Tac Toe game with React.js",
+    link: "https://www.nomu.dev/MineSweeper",
+    github: "https://www.github.com/nomudev/MineSweeper",
+    image: "/src/images/mockupTicTacToe.png",
     tags: ["React", "JavaScript", "HTML", "CSS"],
   },
 ];
@@ -14,8 +29,8 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image, github, link }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul>
         {tags.map((tag) => (
           <li>{tag}</li>
