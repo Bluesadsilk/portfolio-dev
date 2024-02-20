@@ -6,10 +6,11 @@ interface Props {
 const { description, title } = Astro.props;
 import Header from "../components/Header.astro";
 import "@fontsource-variable/onest";
+import Footer from "../components/Footer.astro"
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -25,9 +26,10 @@ import "@fontsource-variable/onest";
     </div>
     <Header />
     <slot />
+  <Footer/>
   </body>
 </html>
-<style is:global>
+<style is:global >
   :root {
     color-scheme: light dark;
   }

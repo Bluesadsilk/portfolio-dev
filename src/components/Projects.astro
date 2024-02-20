@@ -1,0 +1,27 @@
+---
+const PROJECTS = [
+  {
+    title: "MineSweeper",
+    description: "MineSweeper game with React.js",
+    link: "https://www.nomu.dev/MineSweeper",
+    github: "https://www.github.com/nomudev/MineSweeper",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["React", "JavaScript", "HTML", "CSS"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image, github, link }) => (
+    <article>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img src={image} alt={`Project Screenshot ${image}`} />
+    </article>
+  ))
+}
