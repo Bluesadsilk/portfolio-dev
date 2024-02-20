@@ -34,11 +34,18 @@ import "@fontsource-variable/onest";
 
   html {
     font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
   body {
     display: flex;
     flex-direction: column;
     background-color: #1f1d1d;
     min-height: 100vh;
+  }
+
+  @media (prefers-reduce-motion: reduce);{
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
