@@ -82,7 +82,7 @@ import PhoneIcon from "../icons/Phone.astro";
       </h2>
       <Projects />
     </SectionContainer>
-    <SectionContainer id="about-me" class="gap-y-100">
+    <SectionContainer id="about-me">
       <br /><br /><br />
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <UserIcon class="size-7" />
@@ -96,62 +96,8 @@ import PhoneIcon from "../icons/Phone.astro";
         <PhoneIcon class="w-7 h-7" />
         Contact
       </h2>
-      <div class="flex row-auto gap-x-20 gap-y-20 justify-center items-center">
-        <div>
-          <div class"flex row-auto">
-            <div class="">
-              <div class="form-group mb-2">
-                <label class="block mb-2">First Name</label>
-                <input type="text" class="w-full border rounded-md px-3 py-2" />
-              </div>
-            </div>
-
-            <div class="">
-              <div class="form-group mb-2">
-                <label class="block mb-2">Surname</label>
-                <input type="text" class="w-full border rounded-md px-3 py-2" />
-              </div>
-            </div>
-
-            <div class="">
-              <div class="form-group mb-2">
-                <label class="block mb-2">Email</label>
-                <input type="text" class="w-full border rounded-md px-3 py-2" />
-              </div>
-            </div>
-
-            <div class="">
-              <div class="form-group mb-2">
-                <label class="block mb-2">Phone</label>
-                <input type="text" class="w-full border rounded-md px-3 py-2" />
-              </div>
-            </div>
-
-            <div class="col-span-full">
-              <div class="form-group mb-2">
-                <label class="block mb-2">Message</label>
-                <textarea class="w-full border rounded-md px-3 py-2"></textarea>
-              </div>
-            </div>
-
-            <div class="col-span-full">
-              <input
-                type="submit"
-                value="Submit"
-                class="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition duration-300"
-              />
-            </div>
-          </div>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98646.9713581695!2d-0.4439116513183561!3d39.407888824654535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cf0efb06f%3A0xb4a351011f7f1d39!2sValencia!5e0!3m2!1ses!2ses!4v1709566526278!5m2!1ses!2ses"
-          width="300"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      <Contact />
+      <br /><br />
     </SectionContainer>
   </main>
 </Layout>
