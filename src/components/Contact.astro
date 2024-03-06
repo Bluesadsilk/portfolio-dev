@@ -1,93 +1,74 @@
----
-/*AKfycbz0sF141BN24Lm_N22lytfUkhZO77XFt-9CWL9XjHubtXQNfiODdioD2xeLAKsLJAT6 */
-/*https://script.google.com/macros/s/AKfycbz0sF141BN24Lm_N22lytfUkhZO77XFt-9CWL9XjHubtXQNfiODdioD2xeLAKsLJAT6/exec*/
----
-
-<div class="flex row-auto gap-x-20 gap-y-20 justify-center items-center">
-  <div>
-    <form id="contact-form">
-      <div>
-        <div class="form-group mb-2">
-          <label class="block mb-2">First Name</label>
-          <input
-            name="Name"
-            type="text"
-            class="w-full border rounded-md px-3
-      py-2"
-            required
-          />
-        </div>
+<div class="flex flex-col gap-y-4 justify-center items-center">
+  <form id="contact-form">
+    <div class="flex flex-col gap-2">
+      <div class="form-group">
+        <label for="NameField" class="block mb-1">First Name</label>
+        <input
+          id="NameField"
+          autocomplete="additional-name"
+          name="Name"
+          type="text"
+          class="w-full border rounded-md px-3 py-2 focus:outline-blue-500"
+          required
+        />
       </div>
 
-      <div>
-        <div class="form-group mb-2">
-          <label class="block mb-2">Last Name</label>
-          <input
-            name="Surname"
-            type="text"
-            class="w-full border rounded-md px-3
-      py-2"
-            required
-          />
-        </div>
-      </div>
-      <div>
-        <div class="form-group mb-2">
-          <label class="block mb-2">Email</label>
-          <input
-            name="Email"
-            type="email"
-            class="w-full border rounded-md px-3
-      py-2"
-            required
-          />
-        </div>
+      <div class="form-group">
+        <label for="SurnameField" class="block mb-1">Last Name</label>
+        <input
+          id="SurnameField"
+          autocomplete="additional-name"
+          name="Surname"
+          type="text"
+          class="w-full border rounded-md px-3 py-2 focus:outline-blue-500"
+          required
+        />
       </div>
 
-      <div>
-        <div class="form-group mb-2">
-          <label class="block mb-2">Phone Number</label>
-          <input
-            name="Phone"
-            type="number"
-            class="w-full border rounded-md px-3
-      py-2"
-            required
-          />
-        </div>
+      <div class="form-group">
+        <label for="EmailField" class="block mb-1">Email</label>
+        <input
+          id="EmailField"
+          autocomplete="email"
+          name="Email"
+          type="email"
+          class="w-full border rounded-md px-3 py-2 focus:outline-blue-500"
+          required
+        />
       </div>
 
-      <div>
-        <div class="form-group mb-4">
-          <label class="block mb-2">Message</label>
-          <input
-            name="Message"
-            type="text"
-            required
-            class="w-full border rounded-md px-3
-      py-2"
-          />
-        </div>
+      <div class="form-group">
+        <label for="PhoneField" class="block mb-1">Phone Number</label>
+        <input
+          id="PhoneField"
+          autocomplete="tel"
+          name="Phone"
+          type="number"
+          class="w-full border rounded-md px-3 py-2 focus:outline-blue-500"
+          required
+        />
       </div>
-      <div class="col-span-full">
-        <button
-          type="submit"
-          class="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition duration-300"
-          >Send</button
-        >
-      </div>
-    </form>
-  </div>
 
-  <iframe
-    title="maps"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98646.9713581695!2d-0.4439116513183561!3d39.407888824654535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cf0efb06f%3A0xb4a351011f7f1d39!2sValencia!5e0!3m2!1ses!2ses!4v1709566526278!5m2!1ses!2ses"
-    width="300"
-    height="300"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="form-group">
+        <label for="MessageField" class="block mb-1">Message</label>
+        <textarea
+          id="MessageField"
+          name="Message"
+          rows="4"
+          class="w-full border rounded-md px-3 py-2 focus:outline-blue-500"
+          required></textarea>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button
+        type="submit"
+        class="w-full bg-blue-500 text-white font-semibold px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition duration-300"
+      >
+        Send
+      </button>
+    </div>
+  </form>
 </div>
 
 <script>
@@ -100,7 +81,7 @@
 
         const formData = new FormData(form);
         const url =
-          "https://script.google.com/macros/s/AKfycbz0sF141BN24Lm_N22lytfUkhZO77XFt-9CWL9XjHubtXQNfiODdioD2xeLAKsLJAT6/exec"; // Reemplaza 'URL_DEL_SCRIPT' con la URL de tu script de Google Apps Script
+          "https://script.google.com/macros/s/AKfycbz0sF141BN24Lm_N22lytfUkhZO77XFt-9CWL9XjHubtXQNfiODdioD2xeLAKsLJAT6/exec"; // Replace with your Google Apps Script URL
 
         try {
           const response = await fetch(url, {
