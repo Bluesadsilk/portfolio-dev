@@ -7,6 +7,7 @@ const { description, title } = Astro.props;
 import Header from "../components/Header.astro";
 import "@fontsource-variable/onest";
 import Footer from "../components/Footer.astro"
+
 ---
 
 <!doctype html>
@@ -27,6 +28,7 @@ import Footer from "../components/Footer.astro"
     <Header />
     <slot />
   <Footer/>
+  
   </body>
 </html>
 <style is:global >
